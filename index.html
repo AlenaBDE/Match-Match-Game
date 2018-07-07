@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match-Match Game</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/input_form.css">
+    <script src="scripts/script.js"></script>
+    <script src="scripts/input-form.js"></script>
+
+</head>
+
+
+
+<body>
+<wrapper>
+    <ul class="menu-modules">
+        <li class="modal-cards"><a href=#>Shirt-cards</a>
+            <ul class="submenu cards-content">
+                <li><a href=# onclick="setCover('r1.png')"><img src="images/r1.png" width="50"
+                                   height="70"></a></li>
+                <li><a href=# onclick="setCover('r2.png')"><img src="images/r2.png" width="50"
+                                   height="70"></a></li>
+                <li><a href=# onclick="setCover('r3.png')"><img src="images/r3.png" width="50"
+                                   height="70"></a></li>
+            </ul>
+        </li>
+        <li class="module-difficult"><a href=#>Game Difficulty</a>
+            <ul class="submenu difficult-content">
+                <li><a href=# id="difficultLow" onclick="createTable(5,2)"> Low (5*2) </a></li>
+                <li><a href=# id="difficultMedium" onclick="createTable(6,3)"> Medium (6*3)</a></li>
+                <li><a href=# id="difficultHigh" onclick="createTable(8,3)"> High (8*3) </a></li>
+            </ul>
+        </li>
+
+    </ul>
+</wrapper>
+<div id="timer">
+    <div id="hour">00</div>&nbsp;:
+    <div id="minute">00</div>&nbsp;:
+    <div id="second">00</div>
+</div>
+
+<div id="prompt-form-container" class="prompt-form-container">
+    <form id="prompt-form" class="prompt-form">
+        <div id="prompt-message" class="prompt-message"></div>
+
+
+        <label for="fname">First Name: </label>
+        <input id = "fname" name="text" type="text">
+        <p></p>
+        <label for="lname">Last Name: </label>
+        <input id="lname" name="lname" type="text">
+        <p></p>
+        <label for="email">email: </label>
+        <input id="email" name="email" type="text">
+        <p></p>
+        <input type="submit" value="Ок">
+        <input type="button" name="cancel" value="Отмена">
+    </form>
+</div>
+
+<div id="prompt-form-container" class="prompt-form-container">
+    <form id="prompt-form" class="prompt-form">
+        <div id="prompt-message" class="prompt-message"></div>
+        <input name="text" type="text">
+        <input type="submit" value="Ок">
+        <input type="button" name="cancel" value="Отмена">
+    </form>
+</div>
+
+<p></p>
+
+<div class="table" id="div_table"></div>
+
+</body>
+</html>

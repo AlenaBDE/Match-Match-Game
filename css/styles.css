@@ -1,0 +1,136 @@
+:root{
+    --image: url(./../images/r1.png);
+}
+
+body {
+    font: 14px 'Verdana';
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    overflow: hidden;
+    display: block;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    width: 200px;
+    height: 280px;
+    float: left;
+    display: inline;
+    text-align: center;
+    position: relative;
+    padding: 0;
+}
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    z-index: 99;
+}
+
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+
+ul.menu-modules > li {
+    float: left;
+    position: relative;
+    width: 200px;
+    background-color: rgb(89, 122, 201);
+}
+
+ul.menu-modules > li > a {
+    display: block;
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: rgb(117, 154, 240);
+    text-decoration: none;
+}
+
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+    background-color: rgb(89, 122, 201);
+}
+
+ul.menu-modules > li:hover > ul.submenu {
+    display: block;
+}
+
+.card figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s, background 500ms cubic-bezier(1, 0, 0, 1), content 500ms cubic-bezier(1, 0, 0, 1), opacity .3s, visibility 0s linear 0.3s;
+}
+
+#timer {
+    margin: 10px auto;
+    text-align: center;
+    color: #333;
+    font-family: fantasy;
+    font-size: 72px;
+    cursor: default;
+}
+
+#timer div {
+    display: inline;
+}
+
+.card-front {
+    background: white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: var(--image);
+}
+
+.card-back {
+    background: blue;
+    transform: rotateY(180deg);
+}
+
+.hidden-card {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+
